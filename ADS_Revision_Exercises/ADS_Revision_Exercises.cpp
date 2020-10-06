@@ -6,9 +6,6 @@
 
 //declaration => c => semi-colon
 void swap(int a, int b);
-//void swap(int* connectionID, int* portNumber);
-//void swap(int&, int&);
-//void swap(int* &, int* &);
 
 using namespace std;
 void demoSimpleSwap();
