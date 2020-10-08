@@ -2,33 +2,61 @@
 /// @version 1.0
 /// @date 7/10/20
 /// @see Revision Exercises document in Moodle
+
 #include <iostream>
 #include "Flower.h"
 #include "functions.h"
 
 using namespace std;
+
 //exercises
+void pointersExercise1();
 void operatorsExercise2();
 void operatorsExercise3();
 void operatorsExercise5();
+void pointersExercise1();
 void pointersExercise2();
 
-//other demos - swap and adding comments to our code
+//other demos - array length, swap and adding comments to our code
+void usingArrayRefresher();
 void swap(int a, int b);
 void demoSimpleSwap();
 void demoDoxygenComments();
-bool isValidUser(int a, float b, string c, char d);
+bool isValidUser(int a, double b, string c, char d);
 
 int main()
 {
-    //operatorsExercise2();
-    //operatorsExercise3();
-    //operatorsExercise5();
+    cout << "A&DS - Revision Exercises - Selected Solutions" << endl;
 
+    cout << endl << "Operators..." << endl;
+    operatorsExercise2();
+    operatorsExercise3();
+    operatorsExercise5();
+
+    cout << endl << "Pointers..." << endl;
+    pointersExercise1();
     pointersExercise2();
+
+    cout << endl << "Other demos(array and swap)..." << endl;
+    usingArrayRefresher();
+    demoSimpleSwap();
 }
 
 
+void pointersExercise1() {
+
+    int* pArray = new int[3]; //12 bytes of space i.e. 3 x 4 bytes
+    pArray[0] = 15;  //*pArray = 15
+    pArray[1] = 25;  //*(pArray+1) = 25
+    pArray[2] = 35;  //*(pArray+2) = 35
+
+    int sum = getSumOfArray(pArray, 3);
+    cout << "Sum: " << sum << endl;
+
+    //always have a delete for every use of "new"
+    //note we use delete[] to delete a pointer to an array
+    delete[] pArray;
+}
 
 void pointersExercise2() {
     int x = 10;
@@ -66,6 +94,20 @@ void operatorsExercise5() {
 
 /********************************* CODE NOT RELATED TO EXERCISES *********************************/
 
+/// @brief Demonstrates how to use sizeof() to obtain the length of an array
+void usingArrayRefresher() {
+    //if we define an array using the standard method (i.e. not a pointer to an array e.g. int* pArray)
+    //then we can determine the length of the array using sizeof()
+    int ages[3];
+    ages[0] = 18; ages[1] = 22; ages[2] = 34;
+
+    int length = sizeof(ages) / sizeof(ages[0]);
+    cout << "Total size required for the array: " << sizeof(ages) << endl;
+    cout << "Size required for the first element in array: " << sizeof(ages) << endl;
+    cout << "Size of ages: " << length << endl;
+}
+
+
 /// @brief Demonstrates that a swap() using pass-by-copy does not work
 void demoSimpleSwap(){
     //value-types => passed by copy
@@ -100,7 +142,7 @@ void demoDoxygenComments() {
 /// @see https://www.doxygen.nl/manual/commands.html
 /// @author NMCG
 /// @version 1.0
-bool isValidUser(int age, float heightCms, string fullName, char firstNameInitial) {
+bool isValidUser(int age, double heightCms, string fullName, char firstNameInitial) {
     return true;
 }
 
