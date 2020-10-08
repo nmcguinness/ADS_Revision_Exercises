@@ -16,27 +16,30 @@ void swapPtrs(int* &pA, int* &pB) {
 	pA = pTemp;
 }
 
-//stub = function definition + "trivial" function body
+/// @brief Demo function to show how to write a unit test
+/// @param x An integer x
+/// @param y An integer y
+/// @param z An integer z
+/// @return x divide by y divided by z
+/// @exception Throws logic_error if y or z == 0
 int divideAll(int x, int y, int z) {
 
 	if (y == 0 || z == 0)
 		throw std::logic_error("Denominators cannot be zero!");
 
-	//if (y == 0 || z == 0)
-	//	throw std::domain_error("Denominators cannot be zero!");
-
 	return (x / y) / z;
 }
 
-//15, 25, 35
+/// @brief Gets the sum of values in an array of integers
+/// @param pArray Pointer to the first element in the array
+/// @param length Length of the array
+/// @return Integer sum of all values in the array
 int getSumOfArray(int* pArray, int length) {
 
-	//size of a pointer(4) / size of first element i.e. integer(4)
-	//int length = sizeof(pArray) / sizeof(pArray[0]);
 
 	int sum = 0;
 	for (int i = 0; i < length; i++) {
-		//sum += *(pArray + i);
+		//sum += *(pArray + i); //we could write code like this too
 		sum += pArray[i];
 	}
 
