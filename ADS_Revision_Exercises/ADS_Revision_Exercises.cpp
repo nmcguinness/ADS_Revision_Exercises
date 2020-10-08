@@ -4,12 +4,14 @@
 /// @see Revision Exercises document in Moodle
 #include <iostream>
 #include "Flower.h"
+#include "functions.h"
 
 using namespace std;
 //exercises
 void operatorsExercise2();
 void operatorsExercise3();
 void operatorsExercise5();
+void pointersExercise2();
 
 //other demos - swap and adding comments to our code
 void swap(int a, int b);
@@ -19,9 +21,28 @@ bool isValidUser(int a, float b, string c, char d);
 
 int main()
 {
-    operatorsExercise2();
-    operatorsExercise3();
-    operatorsExercise5();
+    //operatorsExercise2();
+    //operatorsExercise3();
+    //operatorsExercise5();
+
+    pointersExercise2();
+}
+
+
+
+void pointersExercise2() {
+    int x = 10;
+    int y = 200;
+
+    int* pX = &x;
+    int* pY = &y;
+
+    swapPtrs(pX, pY);
+    cout << pX << endl; //addr
+    cout << *pX << endl;
+
+    cout << pY << endl; //addr
+    cout << *pY << endl;
 }
 
 /// @brief Demonstrates use of a getter for the Flower class
@@ -77,6 +98,8 @@ void demoDoxygenComments() {
 /// @param firstNameInitial User first initial
 /// @return True if user is allowed access to..., otherwise false
 /// @see https://www.doxygen.nl/manual/commands.html
+/// @author NMCG
+/// @version 1.0
 bool isValidUser(int age, float heightCms, string fullName, char firstNameInitial) {
     return true;
 }

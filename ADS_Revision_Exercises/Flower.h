@@ -38,6 +38,34 @@ public:
 
 	//Q3
 	//operators: +, ++, <<, >>, ==, !=
+	//float neewPrice = f1 + 1.50
+
+	/// @brief Overload the + operator for Flower to increase price
+	/// @param price Adds this new price to Flower
+	/// @return New price of the Flower
+	double operator+(double price) {
+		this->price += price;
+		return this->price;
+	}
+
+	double operator+(int price) {
+		this->price += price;
+		return this->price;
+	}
+
+	/// @brief Comparison operator which compares by price only
+	/// @param other 
+	/// @return 
+	bool operator==(const Flower& other) {
+		return this->price == other.getPrice();
+	}
+
+	bool operator!=(const Flower& other) {
+		//return this->price != other.getPrice();
+		//return !(this->price == other.getPrice());
+		return !(*this == other);
+	}
+
 	//cout << f1 << f2 << f3 << f4;
 	friend ostream& operator<<(ostream& os, const Flower& f);
 
