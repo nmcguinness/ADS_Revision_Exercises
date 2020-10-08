@@ -1,8 +1,8 @@
 #pragma once
-/// @brief 
-/// @param x 
-/// @param y 
-/// @return 
+/// @brief Demo function to show how to write a unit test
+/// @param x Integer value
+/// @param y Float value
+/// @return Integer 
 int dummy(int x, float y) {
 	return -1;
 }
