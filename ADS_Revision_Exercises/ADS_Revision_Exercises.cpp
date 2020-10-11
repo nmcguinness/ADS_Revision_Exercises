@@ -28,12 +28,12 @@ int main()
 {
     cout << "A&DS - Revision Exercises - Selected Solutions" << endl;
 
-    cout << endl << "Operators..." << endl;
+    cout << endl << "Exercises: Operators..." << endl;
     operatorsExercise2();
     operatorsExercise3();
     operatorsExercise5();
 
-    cout << endl << "Pointers..." << endl;
+    cout << endl << "Exercises: Pointers..." << endl;
     pointersExercise1();
     pointersExercise2();
 

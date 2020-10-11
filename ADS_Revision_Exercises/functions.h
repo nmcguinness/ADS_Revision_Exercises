@@ -35,14 +35,11 @@ int divideAll(int x, int y, int z) {
 /// @param length Length of the array
 /// @return Integer sum of all values in the array
 int getSumOfArray(int* pArray, int length) {
-
-
 	int sum = 0;
 	for (int i = 0; i < length; i++) {
 		//sum += *(pArray + i); //we could write code like this too
 		sum += pArray[i];
 	}
-
 	return sum;
 }
 
