@@ -2,7 +2,7 @@
 /// @brief Demo function to show how to write a unit test
 /// @param x Integer value
 /// @param y Float value
-/// @return Integer 
+/// @return Integer
 int dummy(int x, float y) {
 	return -1;
 }
@@ -14,7 +14,6 @@ int dummy(int x, float y) {
 /// @return x divide by y divided by z
 /// @exception Throws logic_error if y or z == 0
 int divideAll(int x, int y, int z) {
-
 	if (y == 0 || z == 0)
 		throw std::logic_error("Denominators cannot be zero!");
 
@@ -71,7 +70,7 @@ void reverseArray(int* pArray, int length) {
 /// @brief Returns a count of the number of even integers in the array
 /// @param pArray A pointer storing the address of the first element in the integer array
 /// @param length The length of the array
-/// @return 
+/// @return
 int countEven(int* pArray, int length) {
 	int count = 0;
 
@@ -84,9 +83,8 @@ int countEven(int* pArray, int length) {
 /// @brief Returns a count of the number of even integers in the array
 /// @param pArray A pointer storing the address of the first element in the double array
 /// @param length The length of the array
-/// @return Pointer to the maximum value in the array 
+/// @return Pointer to the maximum value in the array
 double* getMaximum(double* pArray, int length) {
-
 	if (length == 0)
 		return nullptr;
 
@@ -110,4 +108,3 @@ void printArray(string id, int* pArray, int length) {
 	for (int i = 0; i < length; i++)
 		cout << id << "[" << i << "]: " << pArray[i] << endl;
 }
-

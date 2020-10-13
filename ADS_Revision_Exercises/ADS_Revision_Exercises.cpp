@@ -137,7 +137,7 @@ void pointersExercise6()
 {
     char str[] = { 'a', 'b', 'c', 'd', 'e', '\0'};
 
-    encrypt(str, 6, 1);
+   //call encrypt...
 }
 
 
