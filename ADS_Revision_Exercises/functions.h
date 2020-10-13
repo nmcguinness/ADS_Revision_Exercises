@@ -89,15 +89,17 @@ double* getMaximum(double* pArray, int length) {
 		return nullptr;
 
 	double max = -DBL_MAX; //the negative of the largest value
+	int maxPos = 0;
 
 	for (int i = 0; i < length; i++) {
 		if (pArray[i] > max) {
 			max = pArray[i];
+			maxPos = i;
 		}
 	}
 
 	//return a pointer (i.e. the address of max)
-	return &max;
+	return pArray + maxPos;
 }
 
 /// @brief Utility function to print an array of integer values
